@@ -2,6 +2,7 @@ import random  # Importing the random module
 
 numbers = list(range(10))
 
+
 for number in numbers:
     print(number, number*2)  # Printing the number and its double
 
@@ -43,3 +44,6 @@ for i in range(1000):
     number = random.randint(0, 100)  # Generating a new random number
     
 print(i, number)  # Printing the number of iterations and the final generated number
+
+
+
