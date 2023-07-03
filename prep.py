@@ -9,4 +9,6 @@ def generate_file(name: str = None, size: int = random.randint(1, 10)) -> None:
         fout.write(os.urandom(size))  # Write random bytes to the file
     fout.close()  # Close the file
 
-
+if __name__ == '__main__':
+    for i in range(10):  # Loop 10 times
+        generate_file()  # Generate a file with default parameters
