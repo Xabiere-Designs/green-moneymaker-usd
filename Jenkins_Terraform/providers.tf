@@ -4,7 +4,21 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.8.0"
+      version = "~> 5.9.0"
     }
   }
+<<<<<<< Updated upstream
 }
+=======
+
+  required_version = ">= 1.2.0"
+}
+
+provider "aws" {
+  region  = "us-east-1"
+access_key = "my-access-key"
+  secret_key = "my-secret-key"
+
+}
+
+>>>>>>> Stashed changes
