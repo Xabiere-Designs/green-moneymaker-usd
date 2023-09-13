@@ -9,8 +9,8 @@ variable "instance_type" {
   default = "t2.micro"
 }
 variable "aws_access_key" {
-    default = "AKIATOKGAW3IYQKQE242"
+    default = "access key"
 }
 variable "aws_secret_key" {
-    default = "NwH5tn2CFISed3hBADFmG8kKchPPwsK93qe1Yws8"
+    default = "secret key"
 }
