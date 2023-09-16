@@ -17,3 +17,47 @@ for file in glob.glob(os.getcwd() + slash + '/*'):  # Iterate over files in the 
     
 print(json.dumps(files, indent=4))  # Print the files list as JSON with indentation
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
