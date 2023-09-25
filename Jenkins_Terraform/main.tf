@@ -56,7 +56,3 @@ resource "aws_security_group" "Jenkins_Server" {
 resource "aws_s3_bucket" "CD_Jenkins_Bucket_9_24" {
   bucket = "cd213"
 
-  tags = {
-    Name = "Jenkins_bucket_cd_23"
-  }
-}
