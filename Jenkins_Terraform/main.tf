@@ -19,6 +19,11 @@ resource "aws_instance" "ec2_instance" {
   }
 }
 
+resource "aws_key_pair" "deployer" {
+  key_name   = "Dept_chart"
+  public_key = file("Dept_chart.pem")
+}
+
 # create jenkins server security group
 resource "aws_security_group" "Jenkins_Server" {
   name        = "allow_tls"
@@ -35,12 +40,19 @@ resource "aws_security_group" "Jenkins_Server" {
 
   ingress {
     description = "HTTP"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "HTTP"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -54,5 +66,5 @@ resource "aws_security_group" "Jenkins_Server" {
 }
 
 resource "aws_s3_bucket" "CD_Jenkins_Bucket_9_24" {
-  bucket = "cd213"
-
+  bucket = "cd928"
+}
