@@ -12,16 +12,12 @@ resource "aws_default_vpc" "default_vpc" {
 resource "aws_instance" "ec2_instance" {
   ami           = var.aws_ami
   instance_type = var.instance_type
+  key_name      = var.key_name
   user_data     = file("install_jenkins.sh")
 
   tags = {
     Name = "Jenkins server ami"
   }
-}
-
-resource "aws_key_pair" "deployer" {
-  key_name   = "Dept_chart"
-  public_key = file("Dept_chart.pem")
 }
 
 # create jenkins server security group
